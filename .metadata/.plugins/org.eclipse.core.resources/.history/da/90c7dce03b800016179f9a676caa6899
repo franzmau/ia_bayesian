@@ -1,0 +1,66 @@
+import java.util.ArrayList;
+import java.util.Stack;
+
+
+
+
+public class main {
+	
+	public static final int COLUMNS = 3;
+	public static final int MAX_HEIGHT = 1;
+	
+	
+	public State initialState(){
+		ArrayList <Stack<String>> stateMatrix = new ArrayList<Stack<String>>();
+		for(int i = 0; i < COLUMNS; i++){
+			Stack<String> newStack = new Stack<String>();
+			if(i == 0){
+				newStack.push("A");
+				
+			}
+			
+			if(i == 1){
+				newStack.push("B");
+			}
+			
+			if(i == 2){
+				newStack.push("C");
+			}
+			stateMatrix.add(newStack);
+		}
+		return new State(stateMatrix, MAX_HEIGHT);
+	}
+	
+	public State finalState(){
+		ArrayList <Stack<String>> stateMatrix = new ArrayList<Stack<String>>();
+		for(int i = 0; i < COLUMNS; i++){
+			Stack<String> newStack = new Stack<String>();
+			if(i == 0){
+				newStack.push("B");
+				newStack.push("A");
+				
+			}
+			
+			if(i == 1){
+				newStack.push("C");			
+			}
+			
+			if(i == 2){
+				
+			}
+			stateMatrix.add(newStack);
+		}
+		return new State(stateMatrix, MAX_HEIGHT);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		main m = new main();
+		State initialState = m.initialState();
+		State finalState = m.finalState();		
+		Tree tree = new Tree(initialState);
+		
+		tree.breadthFirstSearch(finalState, 100);
+	}
+
+}

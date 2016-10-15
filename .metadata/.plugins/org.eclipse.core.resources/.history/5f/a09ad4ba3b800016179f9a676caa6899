@@ -1,0 +1,128 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class Tree {
+	private ArrayList<Node> visitedNodes;
+	private Node parentNode;
+	public static final int COLUMNS = 3;
+	
+	public Tree(State s){
+		this.visitedNodes = new ArrayList<Node>();
+		this.parentNode = new Node(s, 0);
+	}
+	
+	public boolean isAlreadyVisited(State s){
+		for (int i=0;i<visitedNodes.size();i++){
+			if(visitedNodes.get(i).isEqual(s)){
+				return true;
+			};
+		}		
+		return false;
+	}
+	
+	public void printMoves(Node n){
+		Node aux = n;
+		Stack <Pair> moves = new Stack<Pair>();
+		while(aux != null && aux.moves != null){
+			moves.push(aux.moves);
+			aux = aux.parent;
+		}
+		
+		while(!moves.isEmpty()){
+			Pair p = moves.pop();
+			System.out.print("("+ p.from +", "+ p.to +")");
+			if(moves.size() > 0){
+				System.out.print("; ");
+			}
+		}
+		System.out.println("");
+	}
+	
+	public void breadthFirstSearch(State finalState , int maxVisited){
+		
+		int counter = 0;
+		
+		Queue <Node> frontier = new LinkedList<Node>();
+		
+		frontier.add(parentNode);
+		
+		while(!frontier.isEmpty() && counter++ < maxVisited){
+			
+			Node n = frontier.poll();
+			
+			visitedNodes.add(n);
+			
+			if(n.isEqual(finalState)){
+				System.out.println(n.cost);
+				printMoves(n);
+				return;
+			}
+			
+			for(int i = 0; i < COLUMNS; i++ ){
+				for(int j = 0; j < COLUMNS; j++ ){
+					
+					State  newNodeState = n.myState.move(i, j);
+					
+					if(newNodeState != null){		
+						
+						
+						Node newNode = new Node(newNodeState, Math.abs(i-j) + 1 + n.cost, n, new Pair( i,j));
+						
+						if(!isAlreadyVisited(newNodeState)){
+							n.addChild(newNode);
+						}
+					}
+				}
+			}
+			
+			n.sortChilds();
+			
+			for(int i = 0; i < n.childs.size(); i++){
+				frontier.add(n.childs.get(i));
+			}
+		}
+	}
+	
+	public void depthFirstSearch(State finalState , int maxVisited){
+		
+		int counter = 0;
+		
+		Stack <Node> frontier = new Stack<Node>();
+		
+		frontier.add(parentNode);
+		
+		while(!frontier.isEmpty() && counter++ < maxVisited){
+			
+			Node n = frontier.pop();
+			
+			visitedNodes.add(n);
+			
+			if(n.isEqual(finalState)){
+				System.out.println(n.cost);
+				printMoves(n);
+				return;
+			}
+			
+			for(int i = 0; i < COLUMNS; i++ ){
+				for(int j = 0; j < COLUMNS; j++ ){
+					
+					State  newNodeState = n.myState.move(i, j);
+					
+					if(newNodeState != null){		
+						
+						
+						Node newNode = new Node(newNodeState, Math.abs(i-j) + 1 + n.cost, n, new Pair( i,j));
+						
+						if(!isAlreadyVisited(newNodeState)){
+							n.addChild(newNode);
+							frontier.push(newNode);
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}

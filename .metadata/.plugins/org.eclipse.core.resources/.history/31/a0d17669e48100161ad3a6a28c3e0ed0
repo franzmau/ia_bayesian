@@ -1,0 +1,107 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Stack;
+public class main {	
+	public State initialState(){
+		//InputReader in = new InputReader(System.in);
+    	Scanner S= new  Scanner(System.in);
+    	int MAX_HEIGHT = S.nextInt();
+		ArrayList <Stack<String>> initialStateMatrix = new ArrayList<Stack<String>>();
+		Stack<String> newStack = new Stack<String>();
+		initialStateMatrix.add(newStack);
+    	int c = S.next(".").charAt(0); 
+    	int prev = c;
+    	int currentArray = 0;
+		while(c!='\n'){
+			c = S.next(".").charAt(0); 
+			if(c == ',' || c == ')'){
+				if(prev != 'X' && prev != 'x'){
+					initialStateMatrix.get(currentArray).push(""+prev);
+				}
+			}
+			if(c == ')'){
+				newStack = new Stack<String>();
+			}
+			prev = c;
+		}
+		S.close();
+		return new State(initialStateMatrix, MAX_HEIGHT);
+	}
+	
+	public State finalState(){
+		InputReader in = new InputReader(System.in);
+    	int MAX_HEIGHT = in.readInt();
+    	
+		ArrayList <Stack<String>> initialStateMatrix = new ArrayList<Stack<String>>();
+		Stack<String> newStack = new Stack<String>();
+		initialStateMatrix.add(newStack);
+    	int c = in.read(); 
+    	int prev = c;
+    	int currentArray = 0;
+		while(c!='\n'){
+			c = in.read();
+			if(c == ',' || c == ')'){
+				if(prev != 'X' && prev != 'x'){
+					initialStateMatrix.get(currentArray).push(""+prev);
+				}
+			}
+			if(c == ')'){
+				newStack = new Stack<String>();
+			}
+			prev = c;
+		}
+		
+		return new State(initialStateMatrix, MAX_HEIGHT);
+	}
+	
+	 public boolean isInvalidChar(int c){
+     	if(c > 'a' && c <'z' ||
+     		c > 'A' && c <'Z'){
+     		return false;
+     	}
+     	return true;
+     }
+     
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		main m = new main();
+		State initialState = m.initialState();
+		//initialState.prettyPrint();
+		State finalState = m.finalState();
+		//finalState.prettyPrint();
+		Tree tree = new Tree(initialState);
+		System.out.println("Uniform cost\n");
+		boolean aux =tree.uniformCost(finalState, 100);
+		if(!aux){
+			System.out.println("No solution found");
+		}
+		System.out.println("\n a* Inconsistent\n");
+		tree=new Tree (initialState);
+		boolean aux2=tree.aStarInConsistent(finalState, 100);
+		if(!aux2){
+			System.out.println("No solution found");
+		}
+		tree=new Tree (initialState);
+		System.out.println("\n a* Consistent\n");
+		boolean aux3 =tree.aStarConsistent(finalState , 100);
+		if(!aux3){
+			System.out.println("No solution found");
+		}
+		tree=new Tree (initialState);
+		System.out.println("\n Breadth First\n");
+		boolean aux4 =tree.breadthFirstSearch(finalState , 100);
+		if(!aux4){
+			System.out.println("No solution found");
+		}
+		tree=new Tree (initialState);
+		System.out.println("\n Depth First\n");
+		boolean aux5 =tree.depthFirstSearch(finalState , 100);
+		if(!aux5){
+			System.out.println("No solution found");
+		}
+		
+	}
+
+}
