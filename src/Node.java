@@ -17,34 +17,20 @@ public class Node {
 		this.Conditional_Prob_Table= new Hashtable<String, Double>();		
 	}
 	
-	public void set_HashTAble(Double Probab, ArrayList<String> Parent){
-	
-		if(Parent.size()>1){
-		String	aux="";	
-				for(int i=0; i<Parent.size(); i++){
-				
-					aux+= Parent.get(i)+"  ";
-				}
-				Conditional_Prob_Table.put(aux, Probab);	
-			
-			}				
-		else{
-			Conditional_Prob_Table.put(Parent.get(0), Probab);
-			
-		}
-		
-
+	public void addToHash( String hashKey , Double probab){
+		Conditional_Prob_Table.put(hashKey, probab);
 	}
 		
 	
 	public String toString(){
 		String output="";
-		output+= "Name= "+this.name+" Probability"+this.probability+" \n ";
-				
-				output += "\n HAsh table";
-				for(String currentKey : this.Conditional_Prob_Table.keySet()){
-					output+="[ "+currentKey+"] -> "+ this.Conditional_Prob_Table.get(currentKey)+" \n";
-				}
+		output+= "Name: '"+this.name+ "'\n" +
+				"Probability: "+this.probability+"\n\n";
+		output+="Hash table:\n";
+		for(String currentKey : this.Conditional_Prob_Table.keySet()){
+			output+="'"+currentKey+"': "+ this.Conditional_Prob_Table.get(currentKey)+" \n";
+		}
+		output += "\n";
 		return output;		
 	}
 	
@@ -71,9 +57,5 @@ public class Node {
 	public void set_name(String name){
 		 this.name=name;
 	}
-	
-	
-	
-	
-	
+		
 }
