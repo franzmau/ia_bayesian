@@ -89,12 +89,7 @@ public class Parser {
 			
 			actualLine = in.readLine();
 		}
-		
-		
-		for(int i = 0; i < nodes.size(); i++){
-			System.out.println(nodes.get(i).toString());
-		}
-		
+	
 		
 	}
 	
@@ -106,14 +101,16 @@ public class Parser {
 		String nodeText;
 		do{
 			 nodeText = in.readString();
-			 System.out.println(nodeText);
+			 //System.out.println(nodeText);
 		}while(!nodeText.contains("Queries"));
 		
 		String actual = ""; 
 		do{
 			actual = in.readLine();
 			actual = actual.replaceAll("\\s+","");
+			System.out.println(actual);
 			if(!actual.isEmpty()){
+				
 				Query q = new Query();
 				String element = "";
 				Boolean parsingQueries = true;
@@ -133,19 +130,24 @@ public class Parser {
 						element += c;
 					}
 				}
+				System.out.println(q.toString());
 				queries.add(q);
 			}
 		}while(!actual.isEmpty());
 		
+		System.out.println(queries.size());
+		
 		for(int i = 0; i < queries.size(); i++){
-			System.out.println(queries.get(i).toString()+"\n\n");
+			System.out.println("Dentro de For");
+			//System.out.println(queries.get(i).toString()+"\n\n");
 			// Create total numerator
 			Query curQuery = queries.get(i);
 			ArrayList<String> query_strings = curQuery.queries;
 			ArrayList<String> evidence_strings = curQuery.evidence;
 			
 			if(evidence_strings.size() == 0){
-				getTotalJointProbability(query_strings, new ArrayList<String>());
+				double result = getTotalJointProbability(query_strings, new ArrayList<String>());
+				System.out.println(result + "\n\r");
 			} else {
 				ArrayList<String> numerator_string = (ArrayList<String>) query_strings.clone();
 				
@@ -159,7 +161,7 @@ public class Parser {
 				ArrayList<String> denominatorHiddenVariables = getHiddenVariables(evidence_strings);
 				double denominatorValue = getTotalJointProbability(evidence_strings, denominatorHiddenVariables);
 				
-				System.out.println((char)(numeratorValue/denominatorValue) + "\n\r");
+				System.out.println((numeratorValue/denominatorValue) + "\n\r");
 			}
 		}
 		
@@ -168,7 +170,6 @@ public class Parser {
 	
 	public ArrayList<String> getHiddenVariables(ArrayList<String> jointNodes){
 		ArrayList<String> hiddenVariables = new ArrayList<String>();
-		ArrayList<String> forJointProb = jointNodes;
 		plus = "+";
 		neg = "-";
 		String plusConcat = plus;
