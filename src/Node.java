@@ -81,8 +81,11 @@ public class Node {
 				}
 			}
 		}
-		System.out.println(this.toString());
-		printArrayList(keys, "KEYS!!!");
+		
+		if(keys.size() == 1){
+			return this.Conditional_Prob_Table.get(keys.get(0));
+		}
+
 		
 		for(int i = 0; i < keys.size(); i++){
 			printArrayList(copy_keys,"COPY KEYS BEFORE");
@@ -109,6 +112,9 @@ public class Node {
 					copy_keys.add(currentKey);
 				}
 			}
+		}
+		if(keys.size() == 1){
+			return 1 - this.Conditional_Prob_Table.get(keys.get(0));
 		}
 		for(int i = 0; i < keys.size(); i++){
 			copy_keys.remove(keys.get(i));
