@@ -9,6 +9,7 @@ import java.util.InputMismatchException;
         private int curChar;
         private int numChars;
         private SpaceCharFilter filter;
+        
 
         public InputReader(InputStream stream)
         {
@@ -78,11 +79,11 @@ import java.util.InputMismatchException;
         {
             int c = read();
             StringBuilder res = new StringBuilder();
-            do
+            while (c != '\n')
             {
                 res.appendCodePoint(c);
                 c = read();
-            } while (c != '\n');
+            };
             return res.toString();
         }
         public double readDouble() {

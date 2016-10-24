@@ -18,21 +18,27 @@ public class Node {
 		this.probability = -1;
 	}
 	
+<<<<<<< HEAD
 	public void set_HashTable(Double Probab, String Previous){
 		Conditional_Prob_Table.put(Previous, Probab);
 		
 
+=======
+	public void addToHash( String hashKey , Double probab){
+		Conditional_Prob_Table.put(hashKey, probab);
+>>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 	}
 		
 	
 	public String toString(){
 		String output="";
-		output+= "Name= "+this.name+" Probability"+this.probability+" \n ";
-				
-				output += "\n HAsh table";
-				for(String currentKey : this.Conditional_Prob_Table.keySet()){
-					output+="[ "+currentKey+"] -> "+ this.Conditional_Prob_Table.get(currentKey)+" \n";
-				}
+		output+= "Name: '"+this.name+ "'\n" +
+				"Probability: "+this.probability+"\n\n";
+		output+="Hash table:\n";
+		for(String currentKey : this.Conditional_Prob_Table.keySet()){
+			output+="'"+currentKey+"': "+ this.Conditional_Prob_Table.get(currentKey)+" \n";
+		}
+		output += "\n";
 		return output;		
 	}
 	
@@ -59,6 +65,7 @@ public class Node {
 	public void set_name(String name){
 		 this.name=name;
 	}
+<<<<<<< HEAD
 	
 	public double getPositiveProbability(ArrayList<String> jointNodes){
 		if(this.probability != -1){
@@ -109,4 +116,7 @@ public class Node {
 	
 	
 	
+=======
+		
+>>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 }
