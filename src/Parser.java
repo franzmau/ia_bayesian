@@ -94,6 +94,13 @@ public class Parser {
 	}
 	
 	
+	public void printArrayList(ArrayList<String> array, String title){
+		System.out.println(title);
+		for(int i = 0; i < array.size(); i++){
+			System.out.println(array.get(i));
+		}
+	}
+	
 	public ArrayList<Query> readQuerys(){
 		ArrayList<Query> queries = new ArrayList<Query>();
 		
@@ -138,13 +145,12 @@ public class Parser {
 		System.out.println(queries.size());
 		
 		for(int i = 0; i < queries.size(); i++){
-			System.out.println("Dentro de For");
 			//System.out.println(queries.get(i).toString()+"\n\n");
 			// Create total numerator
 			Query curQuery = queries.get(i);
 			ArrayList<String> query_strings = curQuery.queries;
 			ArrayList<String> evidence_strings = curQuery.evidence;
-			
+			System.out.println(curQuery.toString());
 			if(evidence_strings.size() == 0){
 				double result = getTotalJointProbability(query_strings, new ArrayList<String>());
 				System.out.println(result + "\n\r");
@@ -155,10 +161,14 @@ public class Parser {
 				for(int j = 0; j < evidence_strings.size(); j++){
 					numerator_string.add(evidence_strings.get(j));
 				}
+				printArrayList(numerator_string, "NUMERATOR STRING");
 				ArrayList<String> numeratorHiddenVariables = getHiddenVariables(numerator_string);
+				printArrayList(numeratorHiddenVariables, "HIDDEN VARIABLES");
 				double numeratorValue = getTotalJointProbability(numerator_string, numeratorHiddenVariables);
 				// Calculate denominator
 				ArrayList<String> denominatorHiddenVariables = getHiddenVariables(evidence_strings);
+				printArrayList(denominatorHiddenVariables, "DENOMINATOR HIDDEN VARIABLES");
+				printArrayList(evidence_strings, "EVIDENCE STRING");
 				double denominatorValue = getTotalJointProbability(evidence_strings, denominatorHiddenVariables);
 				
 				System.out.println((numeratorValue/denominatorValue) + "\n\r");
@@ -191,6 +201,7 @@ public class Parser {
 	
 	public double getTotalJointProbability(ArrayList<String> jointNodes, ArrayList<String> hiddenVariables){
 		if(hiddenVariables.size() == 0){
+			printArrayList(jointNodes, "JOINT NODES");
 			return getJointProbability(jointNodes);
 		} else {
 			String nodeToAdd = hiddenVariables.get(0);
@@ -200,8 +211,11 @@ public class Parser {
 			ArrayList<String> negativeOne = (ArrayList<String>)jointNodes.clone();
 			positiveOne.add(plusConcat.concat(nodeToAdd));
 			negativeOne.add(negConcat.concat(nodeToAdd));
-			hiddenVariables.remove(nodeToAdd);
-			return getTotalJointProbability(positiveOne, hiddenVariables) + getTotalJointProbability(negativeOne, hiddenVariables);
+			ArrayList<String> hiddenClonePos = (ArrayList<String>) hiddenVariables.clone();
+			ArrayList<String> hiddenCloneNeg = (ArrayList<String>) hiddenVariables.clone();
+			hiddenClonePos.remove(nodeToAdd);
+			hiddenCloneNeg.remove(nodeToAdd);
+			return getTotalJointProbability(positiveOne, hiddenClonePos) + getTotalJointProbability(negativeOne, hiddenCloneNeg);
 		}
 	}
 	

@@ -60,6 +60,13 @@ public class Node {
 		 this.name=name;
 	}
 	
+	public void printArrayList(ArrayList<String> array, String title){
+		System.out.println(title);
+		for(int i = 0; i < array.size(); i++){
+			System.out.println(array.get(i));
+		}
+	}
+	
 	public double getPositiveProbability(ArrayList<String> jointNodes){
 		if(this.probability != -1){
 			return this.probability;
@@ -68,15 +75,20 @@ public class Node {
 		ArrayList<String> copy_keys = new ArrayList<String>();
 		for(String currentKey : this.Conditional_Prob_Table.keySet()){
 			for(int i = 0; i < jointNodes.size(); i++){
-				if(currentKey.equals(jointNodes.get(i))){
+				if(currentKey.toLowerCase().contains(jointNodes.get(i).toLowerCase())){
 					keys.add(currentKey);
 					copy_keys.add(currentKey);
 				}
 			}
 		}
+		System.out.println(this.toString());
+		printArrayList(keys, "KEYS!!!");
+		
 		for(int i = 0; i < keys.size(); i++){
+			printArrayList(copy_keys,"COPY KEYS BEFORE");
 			copy_keys.remove(keys.get(i));
-			if(!copy_keys.contains(keys.get(i))){
+			printArrayList(copy_keys,"COPY KEYS AFTER");
+			if(copy_keys.contains(keys.get(i))){
 				return this.Conditional_Prob_Table.get(keys.get(i));
 			}
 			copy_keys = (ArrayList<String>) keys.clone();
@@ -92,7 +104,7 @@ public class Node {
 		ArrayList<String> copy_keys = new ArrayList<String>();
 		for(String currentKey : this.Conditional_Prob_Table.keySet()){
 			for(int i = 0; i < jointNodes.size(); i++){
-				if(currentKey.equals(jointNodes.get(i))){
+				if(currentKey.toLowerCase().contains(jointNodes.get(i).toLowerCase())){
 					keys.add(currentKey);
 					copy_keys.add(currentKey);
 				}
@@ -100,7 +112,7 @@ public class Node {
 		}
 		for(int i = 0; i < keys.size(); i++){
 			copy_keys.remove(keys.get(i));
-			if(!copy_keys.contains(keys.get(i))){
+			if(copy_keys.contains(keys.get(i))){
 				return (1-this.Conditional_Prob_Table.get(keys.get(i)));
 			}
 			copy_keys = (ArrayList<String>) keys.clone();
