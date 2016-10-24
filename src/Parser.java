@@ -105,42 +105,31 @@ public class Parser {
 		ArrayList<Query> queries = new ArrayList<Query>();
 		
 		// Wait until the string Nodes Appear
-		String nodeText;
-		do{
-			 nodeText = in.readString();
-			 //System.out.println(nodeText);
-		}while(!nodeText.contains("Queries"));
-		
-		String actual = ""; 
-		do{
-			actual = in.readLine();
-			actual = actual.replaceAll("\\s+","");
-			System.out.println(actual);
-			if(!actual.isEmpty()){
-				
-				Query q = new Query();
-				String element = "";
-				Boolean parsingQueries = true;
-				for(int i = 0; i < actual.length(); i++){
-					char c = actual.charAt(i);
-					if(c == ',' || c == '|' ){
-						if(parsingQueries){
-							q.addQuery(element);
-						}else{
-							q.addEvidence(element);
-						}
-						if(c == '|'){
-							parsingQueries = false;
-						}
-						element = "";
-					}else{
-						element += c;
-					}
+		String actualLine = in.readLine();
+		String actualQuery = "";
+		while(!actualLine.isEmpty()){
+			Query q = new Query();
+			actualLine = actualLine.replaceAll("\\s+","");
+			if(!actualLine.contains("|")){
+				q.addQuery(actualLine);
+			}else{
+				actualQuery = actualLine.split("\\|")[0];
+				String queriesArray [] = actualQuery.split(",");
+				for(int i = 0; i < queriesArray.length; i++){
+					q.addQuery(queriesArray[i]);
 				}
-				System.out.println(q.toString());
-				queries.add(q);
+				
+				String temp = actualLine.split("\\|")[1];
+				String evidences [] = temp.split(",");
+				for(int i = 0; i < evidences.length; i++){
+					q.addEvidence(evidences[i]);
+				}				
 			}
-		}while(!actual.isEmpty());
+			
+			queries.add(q);
+			actualLine = in.readLine();
+		}
+		queries.remove(0);
 		
 		System.out.println(queries.size());
 		

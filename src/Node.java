@@ -92,6 +92,8 @@ public class Node {
 			copy_keys.remove(keys.get(i));
 			printArrayList(copy_keys,"COPY KEYS AFTER");
 			if(copy_keys.contains(keys.get(i))){
+				System.out.println("KEY: ");
+				System.out.println(keys.get(i));
 				return this.Conditional_Prob_Table.get(keys.get(i));
 			}
 			copy_keys = (ArrayList<String>) keys.clone();
@@ -119,6 +121,8 @@ public class Node {
 		for(int i = 0; i < keys.size(); i++){
 			copy_keys.remove(keys.get(i));
 			if(copy_keys.contains(keys.get(i))){
+				System.out.println("KEY: ");
+				System.out.println(keys.get(i));
 				return (1-this.Conditional_Prob_Table.get(keys.get(i)));
 			}
 			copy_keys = (ArrayList<String>) keys.clone();
