@@ -7,7 +7,6 @@ import java.util.Stack;
 
 public class Parser {
 	public static InputReader in;
-	public ArrayList<Node> nodes;
 	
 	private ArrayList<String> nodes_strings;
 	private ArrayList<Node> nodes;
@@ -20,16 +19,11 @@ public class Parser {
 		in = new InputReader(System.in);
 	}
 	
-	
 	public void readNodes(){
 		
-<<<<<<< HEAD
 		nodes_strings = new ArrayList<String>();
 		nodes = new ArrayList<Node>();
 		nodes_hash = new Hashtable<String, Node>();
-=======
-		nodes = new ArrayList<Node>();
->>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 		
 		// Wait until the string Nodes Appear
 		String nodeText;
@@ -42,20 +36,14 @@ public class Parser {
 		do{
 			c = in.read();
 			if(c == ',' || c == '\n'){
-<<<<<<< HEAD
 				nodes_strings.add(actual);
 				
-=======
-				actual = actual.replaceAll("\\s+","");
-				nodes.add(new Node(actual));
->>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 				actual = "";
 			}else{
 				actual += (char)c;
 			}
 		}while(c != '\n');
 		
-<<<<<<< HEAD
 		for(int i = 0; i < nodes_strings.size(); i++){
 			System.out.println(nodes_strings.get(i));
 			
@@ -66,22 +54,15 @@ public class Parser {
 			
 		}
 		
-=======
->>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 	}
-	
 	
 	public void readProbabilities(){
 		ArrayList<String> probabilities = new ArrayList<String>();
-		ArrayList<String> queries = new ArrayList<String>();
 		ArrayList<Double> probabilitiesNumber = new ArrayList<Double>();
-<<<<<<< HEAD
 		ArrayList<String> node_probabilities = new ArrayList<String>();
 		Node to_save;
 		boolean compound_flag = false;
 		
-=======
->>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 		// Wait until the string Nodes Appear
 		String nodeText;
 		do{
@@ -89,7 +70,6 @@ public class Parser {
 		}while(!nodeText.contains("Probabilities"));
 		
 		int c;
-<<<<<<< HEAD
 		String actual = ""; 
 		do{
 			c = in.read();
@@ -109,28 +89,9 @@ public class Parser {
 				actual = "";
 			}else if(c == '\n'){
 				probabilitiesNumber.add(Double.parseDouble(actual));
-=======
-		String actualLine = ""; 
-		String actualQuery = "";
-		String actualEvidence = "";
-		double actualProbability = 0;
-		Boolean evidence = false;
-		actualLine = in.readLine();
-		while(!actualLine.isEmpty()){
-			actualLine = actualLine.replaceAll("\\s+","");
-			if(!actualLine.contains("|")){
-				evidence = false;
-				actualQuery = actualLine.split("=")[0];
-				actualProbability = Double.parseDouble(actualLine.split("=")[1]);
->>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 			}else{
-				evidence = true;
-				actualQuery = actualLine.split("\\|")[0];
-				String temp = actualLine.split("\\|")[1];
-				actualEvidence = temp.split("=")[0];
-				actualProbability = Double.parseDouble(actualLine.split("=")[1]);
+				actual += (char) c;
 			}
-<<<<<<< HEAD
 		}while(c != '[');
 		
 		for(int i = 0; i < node_probabilities.size(); i++){
@@ -150,29 +111,6 @@ public class Parser {
 		for(int i = 0; i < probabilitiesNumber.size(); i++){
 			System.out.println(probabilitiesNumber.get(i));
 		}*/
-=======
-			
-			for(int i = 0; i < nodes.size(); i++){
-				Node actualNode = nodes.get(i);
-				if(actualQuery.toLowerCase().contains(actualNode.name.toLowerCase())){
-					if(evidence){
-						actualNode.addToHash(actualEvidence, actualProbability);
-					}else{
-						actualNode.probability = actualProbability;
-					}
-				}
-			}
-			
-			actualLine = in.readLine();
-		}
-		
-		
-		for(int i = 0; i < nodes.size(); i++){
-			System.out.println(nodes.get(i).toString());
-		}
-		
-		
->>>>>>> 583db8ac81e8a488348571191cfb8c42740c9f07
 	}
 	
 	
