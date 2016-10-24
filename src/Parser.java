@@ -95,10 +95,11 @@ public class Parser {
 	
 	
 	public void printArrayList(ArrayList<String> array, String title){
+		/*
 		System.out.println(title);
 		for(int i = 0; i < array.size(); i++){
 			System.out.println(array.get(i));
-		}
+		}*/
 	}
 	
 	public ArrayList<Query> readQuerys(){
@@ -130,19 +131,17 @@ public class Parser {
 			actualLine = in.readLine();
 		}
 		queries.remove(0);
-		
-		System.out.println(queries.size());
-		
+				
 		for(int i = 0; i < queries.size(); i++){
 			//System.out.println(queries.get(i).toString()+"\n\n");
 			// Create total numerator
 			Query curQuery = queries.get(i);
 			ArrayList<String> query_strings = curQuery.queries;
 			ArrayList<String> evidence_strings = curQuery.evidence;
-			System.out.println(curQuery.toString());
 			if(evidence_strings.size() == 0){
-				double result = getTotalJointProbability(query_strings, new ArrayList<String>());
-				System.out.println(result + "\n\r");
+				ArrayList<String> numeratorHiddenVariables = getHiddenVariables(query_strings);
+				double result = getTotalJointProbability(query_strings, numeratorHiddenVariables);
+				System.out.println(result);
 			} else {
 				ArrayList<String> numerator_string = (ArrayList<String>) query_strings.clone();
 				
@@ -160,7 +159,7 @@ public class Parser {
 				printArrayList(evidence_strings, "EVIDENCE STRING");
 				double denominatorValue = getTotalJointProbability(evidence_strings, denominatorHiddenVariables);
 				
-				System.out.println((numeratorValue/denominatorValue) + "\n\r");
+				System.out.println((numeratorValue/denominatorValue));
 			}
 		}
 		

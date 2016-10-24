@@ -12,9 +12,7 @@ public class Main {
 		
 		parser.readProbabilities();
 		
-		parser.readQuerys();
-		
-		System.out.println("Arturo it pit!");
+		parser.readQuerys();		
 	}
 
 }
