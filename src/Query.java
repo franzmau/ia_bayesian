@@ -20,6 +20,8 @@ public class Query {
 		queries.add(name);
 	}
 	
+	
+	
 	public String toString(){
 		String output = "";
 		output += "QUERIES : \n";

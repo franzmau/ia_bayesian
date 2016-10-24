@@ -15,23 +15,11 @@ public class Node {
 	public Node(String name){
 		this.set_name(name);
 		this.Conditional_Prob_Table= new Hashtable<String, Double>();		
+		this.probability = -1;
 	}
 	
-	public void set_HashTAble(Double Probab, ArrayList<String> Parent){
-	
-		if(Parent.size()>1){
-		String	aux="";	
-				for(int i=0; i<Parent.size(); i++){
-				
-					aux+= Parent.get(i)+"  ";
-				}
-				Conditional_Prob_Table.put(aux, Probab);	
-			
-			}				
-		else{
-			Conditional_Prob_Table.put(Parent.get(0), Probab);
-			
-		}
+	public void set_HashTable(Double Probab, String Previous){
+		Conditional_Prob_Table.put(Previous, Probab);
 		
 
 	}
@@ -70,6 +58,51 @@ public class Node {
 	
 	public void set_name(String name){
 		 this.name=name;
+	}
+	
+	public double getPositiveProbability(ArrayList<String> jointNodes){
+		if(this.probability != -1){
+			return this.probability;
+		}
+		ArrayList<String> keys = new ArrayList<String>();
+		ArrayList<String> copy_keys = new ArrayList<String>();
+		for(String currentKey : this.Conditional_Prob_Table.keySet()){
+			if(currentKey.contains((CharSequence) jointNodes)){
+				keys.add(currentKey);
+				copy_keys.add(currentKey);
+			}
+		}
+		for(int i = 0; i < keys.size(); i++){
+			copy_keys.remove(keys.get(i));
+			if(!copy_keys.contains(keys.get(i))){
+				return this.Conditional_Prob_Table.get(keys.get(i));
+			}
+			copy_keys = (ArrayList<String>) keys.clone();
+		}
+		return -1;
+	}
+	
+	public double getNegativeProbability(ArrayList<String> jointNodes){
+		if(this.probability != -1){
+			return 1-this.probability;
+		}
+		ArrayList<String> keys = new ArrayList<String>();
+		ArrayList<String> copy_keys = new ArrayList<String>();
+		for(String currentKey : this.Conditional_Prob_Table.keySet()){
+			if(currentKey.contains((CharSequence) jointNodes)){
+				keys.add(currentKey);
+				copy_keys.add(currentKey);
+			}
+		}
+		for(int i = 0; i < keys.size(); i++){
+			copy_keys.remove(keys.get(i));
+			if(!copy_keys.contains(keys.get(i))){
+				return (1-this.Conditional_Prob_Table.get(keys.get(i)));
+			}
+			copy_keys = (ArrayList<String>) keys.clone();
+		}
+		
+		return -1;
 	}
 	
 	
