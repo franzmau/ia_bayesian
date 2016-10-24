@@ -13,7 +13,6 @@ public class Main {
 		parser.readProbabilities();
 		
 		parser.readQuerys();
-		System.out.println("END");
 		
 	}
 

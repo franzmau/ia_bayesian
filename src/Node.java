@@ -67,9 +67,11 @@ public class Node {
 		ArrayList<String> keys = new ArrayList<String>();
 		ArrayList<String> copy_keys = new ArrayList<String>();
 		for(String currentKey : this.Conditional_Prob_Table.keySet()){
-			if(currentKey.contains((CharSequence) jointNodes)){
-				keys.add(currentKey);
-				copy_keys.add(currentKey);
+			for(int i = 0; i < jointNodes.size(); i++){
+				if(currentKey.equals(jointNodes.get(i))){
+					keys.add(currentKey);
+					copy_keys.add(currentKey);
+				}
 			}
 		}
 		for(int i = 0; i < keys.size(); i++){
@@ -89,9 +91,11 @@ public class Node {
 		ArrayList<String> keys = new ArrayList<String>();
 		ArrayList<String> copy_keys = new ArrayList<String>();
 		for(String currentKey : this.Conditional_Prob_Table.keySet()){
-			if(currentKey.contains((CharSequence) jointNodes)){
-				keys.add(currentKey);
-				copy_keys.add(currentKey);
+			for(int i = 0; i < jointNodes.size(); i++){
+				if(currentKey.equals(jointNodes.get(i))){
+					keys.add(currentKey);
+					copy_keys.add(currentKey);
+				}
 			}
 		}
 		for(int i = 0; i < keys.size(); i++){
