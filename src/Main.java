@@ -14,6 +14,7 @@ public class Main {
 		
 		parser.readQuerys();
 		
+		System.out.println("Arturo it pit!");
 	}
 
 }
