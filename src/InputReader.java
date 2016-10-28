@@ -79,7 +79,7 @@ import java.util.InputMismatchException;
         {
             int c = read();
             StringBuilder res = new StringBuilder();
-            while (c != '\n')
+            while (c != '\n' && c  >= 0)
             {
                 res.appendCodePoint(c);
                 c = read();
