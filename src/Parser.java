@@ -141,7 +141,8 @@ public class Parser {
 			if(evidence_strings.size() == 0){
 				ArrayList<String> numeratorHiddenVariables = getHiddenVariables(query_strings);
 				double result = getTotalJointProbability(query_strings, numeratorHiddenVariables);
-				System.out.println(result);
+				double output = Math.round(result*10000000.0)/10000000.0;
+				System.out.println(output);
 			} else {
 				ArrayList<String> numerator_string = (ArrayList<String>) query_strings.clone();
 				
@@ -158,8 +159,8 @@ public class Parser {
 				printArrayList(denominatorHiddenVariables, "DENOMINATOR HIDDEN VARIABLES");
 				printArrayList(evidence_strings, "EVIDENCE STRING");
 				double denominatorValue = getTotalJointProbability(evidence_strings, denominatorHiddenVariables);
-				
-				System.out.println((numeratorValue/denominatorValue));
+				double output = Math.round(numeratorValue/denominatorValue*10000000.0)/10000000.0;
+				System.out.println(output);
 			}
 		}
 		
