@@ -1055,3 +1055,257 @@ org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!SESSION 2016-10-18 17:38:55.491 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-10-18 17:39:34.126
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 2 2 2016-10-18 18:04:55.932
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2016-10-18 18:04:55.932
+!MESSAGE The project description file (.project) for 'ia_bayesian' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2016-10-18 18:13:40.153
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/windowbuilder/WB/integration/3.7.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-10-18 18:13:40.155
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/3.7.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-10-18 18:13:49.920
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:13:49.920
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.920
+!MESSAGE Software being installed: Command Line Interface for Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.pgm.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.920
+!MESSAGE Missing requirement: JGit Large File Storage Server 4.5.0.201609210915-r (org.eclipse.jgit.lfs.server 4.5.0.201609210915-r) requires 'package javax.servlet [3.1.0,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:13:49.920
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.920
+!MESSAGE From: Java implementation of Git - optional LFS support 4.5.0.201609210915-r (org.eclipse.jgit.lfs.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.920
+!MESSAGE To: org.eclipse.jgit.lfs.server [4.5.0.201609210915-r]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:13:49.920
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.920
+!MESSAGE From: Command Line Interface for Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.pgm.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.921
+!MESSAGE To: org.eclipse.jgit.lfs.feature.group [4.5.0.201609210915-r]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-10-18 18:13:49.926
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:13:49.926
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.926
+!MESSAGE Software being installed: Command Line Interface for Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.pgm.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.926
+!MESSAGE Missing requirement: JGit Large File Storage Server 4.5.0.201609210915-r (org.eclipse.jgit.lfs.server 4.5.0.201609210915-r) requires 'package javax.servlet [3.1.0,4.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:13:49.926
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.926
+!MESSAGE From: Java implementation of Git - optional LFS support 4.5.0.201609210915-r (org.eclipse.jgit.lfs.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.926
+!MESSAGE To: org.eclipse.jgit.lfs.server [4.5.0.201609210915-r]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:13:49.926
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.926
+!MESSAGE From: Command Line Interface for Java implementation of Git 4.5.0.201609210915-r (org.eclipse.jgit.pgm.feature.group 4.5.0.201609210915-r)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:13:49.926
+!MESSAGE To: org.eclipse.jgit.lfs.feature.group [4.5.0.201609210915-r]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-10-18 18:14:21.462
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:14:21.463
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:14:21.463
+!MESSAGE Software being installed: Git Team Provider - auto-import for Eclipse >= 4.6 4.5.0.201609210915-r (org.eclipse.egit.ui.smartimport 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:14:21.463
+!MESSAGE Missing requirement: Git Team Provider - auto-import for Eclipse >= 4.6 4.5.0.201609210915-r (org.eclipse.egit.ui.smartimport 4.5.0.201609210915-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-10-18 18:14:21.467
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-10-18 18:14:21.467
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:14:21.467
+!MESSAGE Software being installed: Git Team Provider - auto-import for Eclipse >= 4.6 4.5.0.201609210915-r (org.eclipse.egit.ui.smartimport 4.5.0.201609210915-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-18 18:14:21.467
+!MESSAGE Missing requirement: Git Team Provider - auto-import for Eclipse >= 4.6 4.5.0.201609210915-r (org.eclipse.egit.ui.smartimport 4.5.0.201609210915-r) requires 'bundle org.eclipse.ui.ide 3.12.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-10-18 18:15:12.116
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-10-18 18:15:12.117
+!MESSAGE session context was:(profile=PlatformProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,com.jcraft.jsch,0.1.53.v201508180515
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,javaewah,0.7.9.v201605172130
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.apache.commons.compress,1.6.0.v201310281400
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.core,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.core.source,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.doc,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.gitflow.source,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.gitflow.ui.source,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.mylyn,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.mylyn.ui,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.mylyn.ui.source,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.source,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.ui,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.ui.source,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit.archive,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit,4.5.0.201609210915-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.117
+!MESSAGE No repository found containing: osgi.bundle,org.slf4j.api,1.7.2.v20121108-1250
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-10-18 18:15:12.118
+!MESSAGE No repository found containing: osgi.bundle,org.slf4j.impl.log4j12,1.7.2.v20131105-2200
+!SESSION 2016-10-20 16:25:40.065 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-10-20 16:25:57.475
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-10-30 13:46:47.830 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-10-30 13:46:58.366
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-10-30 18:38:20.275 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-10-30 18:38:27.484
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-10-31 21:05:37.971 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-10-31 21:05:50.568
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-01 19:09:43.953 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-01 19:09:57.414
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-03 15:25:50.526 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-03 15:26:01.769
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-04 14:16:39.952 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-04 14:16:51.543
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-05 11:47:22.928 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-05 11:48:28.584
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-06 16:07:43.294 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-06 16:08:39.599
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-07 17:59:44.899 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-07 17:59:56.042
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-08 17:37:44.579 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-08 17:37:56.564
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-08 20:43:39.650 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-08 20:43:50.007
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-11-08 20:58:07.198 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_MX
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-11-08 20:59:01.850
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
