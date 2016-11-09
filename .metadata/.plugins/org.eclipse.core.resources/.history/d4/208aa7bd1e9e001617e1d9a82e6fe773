@@ -1,0 +1,67 @@
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+public class Parser {
+	public static InputReader in;
+	private ArrayList<String> nodes_strings;
+	public ArrayList<Atrribute> attributes;
+	public Hashtable <String, Atrribute> nodes_hash;
+	private String plus;
+	private String neg;
+	
+	public Parser(){
+		in = new InputReader(System.in);
+	}
+	
+	
+	public void readNodes(){
+		attributes = new ArrayList<Atrribute>();
+		
+		
+		
+		// Wait until the string Nodes Appear
+		String relationText;
+		do{ 
+			relationText = in.readLine();
+		}while(!relationText.contains("@relation"));
+	   relationText=in.readLine();
+	   String attributesText;
+	   
+	   attributesText=in.readLine();
+	   
+	   
+	   while(attributesText.contains("@attribute")){
+		   
+		   String[] splitedText = attributesText.split("\\s+");
+		   Atrribute attribute =new Atrribute(splitedText[1]);
+		   
+		   for(int i=2;i<splitedText.length;i++){
+			   splitedText[i] = splitedText[i].replace("$", "").replace(",", "").replace("{", "").replace("}", "");
+		   	   attribute.addState(splitedText[i]);
+		   }
+		   attributes.add(attribute);
+		   		   
+		   attributesText=in.readLine();
+	   }
+	   /*
+	   for(Atrribute a:attributes){
+		   System.out.println("Nombre "+a.getName());
+		   ArrayList <String> S=a.getState();
+		   for(String s:S){
+			   System.out.println("Estado "+s);
+		   }
+		   System.out.println("");
+	   }*/
+	   String DATA;
+		do{ 
+			relationText = in.readLine();
+		}while(!relationText.contains("@data"));
+		
+		
+	   
+	   
+	   
+		
+	}
+	
+}

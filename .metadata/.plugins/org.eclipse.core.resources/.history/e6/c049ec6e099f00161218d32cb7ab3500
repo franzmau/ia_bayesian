@@ -1,0 +1,7 @@
+public interface Person {
+   void draw(int i);
+
+void draw(int i, int j);
+
+}
+

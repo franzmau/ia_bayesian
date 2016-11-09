@@ -1,0 +1,54 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Hashtable;
+import java.util.Stack;
+
+public class Node {
+	
+	public ArrayList <Node> Parent;
+	public Hashtable <String, Double> Conditional_Prob_Table; 
+	public String name;
+
+	
+
+	public Node(ArrayList <Node> Parent, ArrayList <Double> Probab , String name ){
+	this.Parent=(ArrayList<Node>)Parent.clone();
+	this.name=name;
+	Conditional_Prob_Table= new Hashtable<String, Double>();
+		if(Parent.size()>0){
+			for(int i=0; i<Parent.size(); i++){
+			String aux= Parent.get(i).get_name();
+			Conditional_Prob_Table.put(aux, Probab.get(i));	
+			}
+		}
+		
+		
+		
+	}
+	
+	
+	
+	//RECIBO NODO Y LO AGREGO AL ARRAYLIST 
+	
+	
+	
+	public Node(String name){
+		this.set_name(name);
+		
+	}
+	
+	public String get_name(){
+		return this.name;
+	}
+	
+	public void set_name(String name){
+		 this.name=name;
+	}
+	
+	
+	
+	
+	
+}

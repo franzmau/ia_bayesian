@@ -1,0 +1,18 @@
+
+public class Computer {
+	int Board[][];
+	final int length=6;
+	final int wide= 7;
+	final int cpu=2;
+	final int player=1;
+	int posx [];
+	final int depth =20;
+	
+	public Computer(){
+		Board= new int [length][wide];
+		posx=new int[7];
+		
+		
+	}
+	
+}

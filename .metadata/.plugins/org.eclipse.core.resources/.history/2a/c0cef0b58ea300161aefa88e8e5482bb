@@ -1,0 +1,78 @@
+
+public class Computer {
+	int Board[][];
+	final int length=6;
+	final int wide= 7;
+	final int cpu=2;
+	final int player=1;
+	int posx [];
+	final int depth =20;
+	
+	public Computer(){
+		Board= new int [length][wide];
+		posx=new int[7];
+	
+	}
+	
+	public int game_finished(int Board[][]){
+		int auxP=0;
+		int auxC=0;
+		for (int i=length-1; i>=0;i--){
+			for(int j=wide-1;j>=0;j--){
+			if(Board[i][j]==1){
+				auxP++;
+				auxC=0;
+			}else if (Board[i][j]==2){
+				auxC++;
+				auxP=0;
+			}else{
+				auxC=0;
+				auxP=0;
+			}
+			if(auxC==4){
+				return cpu;
+			}
+			if(auxP==4){
+				return player;
+			}
+			}
+		}
+		for(int j=wide-1;j>=0;j--){
+			for (int i=length-1; i>=0;i--){
+				if(Board[i][j]==1){
+					auxP++;
+					auxC=0;
+				}else if (Board[i][j]==2){
+					auxC++;
+					auxP=0;
+				}else{
+					auxC=0;
+					auxP=0;
+				}
+				if(auxC==4){
+					return cpu;
+				}
+				if(auxP==4){
+					return player;
+				}
+				}
+				
+			}	
+		return 0;
+	}
+
+
+	
+	public int compute(int Board[][],int depth){
+		if(depth==this.depth){
+			if(this.game_finished(Board)==0){
+				return 0;
+			}
+		}
+		
+			
+		
+		return 1;
+	}
+	
+}

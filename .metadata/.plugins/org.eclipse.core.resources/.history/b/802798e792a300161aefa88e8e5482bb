@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class main {
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		game Game= new game();
+		Game.start_game();
+		int person;
+		Computer computer=new Computer();
+		
+		System.out.print("mas grande"+computer.biggest(-2, 8, 12, 4, 5, 6, 7));
+		/*
+		Scanner sc = new Scanner(System.in);
+	    while(Game.game_finished()==0){
+	    	do{
+	    	System.out.print("muevele\n");
+	    	person= sc.nextInt();
+	    	
+	    	}while(!Game.movePerson(person));
+	    	
+	    	Game.print();
+	    	
+	    }
+		*/
+		
+			
+	}
+
+}

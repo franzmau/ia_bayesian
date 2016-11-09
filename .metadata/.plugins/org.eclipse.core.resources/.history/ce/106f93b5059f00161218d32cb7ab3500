@@ -1,0 +1,9 @@
+
+public class ShapeFactory {
+
+	public  Circle getCircle(String randomColor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,36 @@
+
+public class Circle implements Shape {
+	String Color;
+	int x;
+	int y;
+	public Circle(String color) {
+		// TODO Auto-generated constructor stub
+	this.Color=color;
+	}
+
+	public void draw(int i) {
+		// TODO Auto-generated method stub
+		System.out.println("You need "+(i*3.1416)+" of space (like square meters) to draw this circle\n ");
+	}
+
+	public void draw(int i, int j) {
+		// TODO Auto-generated method stub
+		draw(i);
+	}
+
+	public void setX(int x) {
+		// TODO Auto-generated method stub
+		this.x=x;
+	}
+
+	public void setRadius(int r) {
+		// TODO Auto-generated method stub
+	 this.y=r;	
+	}
+
+	public int getRadius() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

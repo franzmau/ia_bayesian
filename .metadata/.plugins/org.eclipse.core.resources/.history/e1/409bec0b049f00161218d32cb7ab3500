@@ -1,0 +1,16 @@
+
+public class Rectangle implements Shape {
+
+	public void draw(int i,int v) {
+		// TODO Auto-generated method stub
+		
+		System.out.print("You need "+(i*v)+"of  square space to draw this rectangle ");
+
+	}
+
+	public void draw(int i) {
+		// TODO Auto-generated method stub
+		draw(i,i*2);
+	}
+
+}

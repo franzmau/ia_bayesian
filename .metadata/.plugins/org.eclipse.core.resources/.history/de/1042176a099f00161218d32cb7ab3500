@@ -1,0 +1,21 @@
+public class ShapeMaker {
+   private Shape circle;
+   private Shape rectangle;
+   private Shape square;
+   //this is facade class
+   public ShapeMaker() {
+      circle = new Circle();
+      rectangle = new Rectangle();
+      square = new Square();
+   }
+
+   public void drawCircle(int i){
+      circle.draw(i);
+   }
+   public void drawRectangle(int i,int j){
+      rectangle.draw(i,j);
+   }
+   public void drawSquare(int i){
+      square.draw(i);
+   }
+}

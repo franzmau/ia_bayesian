@@ -1,0 +1,9 @@
+
+public class main_facade {
+	public static void main(String[] args) {
+		 PersonMaker personMaker = new PersonMaker();
+		 personMaker.payEmployee(3000);
+		 personMaker.payEntreperneur(2000*(int)Math.random(),4);
+		 personMaker.payfreelance(3000*(int)Math.random());
+	}
+}

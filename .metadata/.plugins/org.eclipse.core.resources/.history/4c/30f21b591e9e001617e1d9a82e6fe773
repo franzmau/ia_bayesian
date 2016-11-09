@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+
+public class Data {
+	
+	public ArrayList <String> Attributes;
+	public int id;
+	
+	public Data(int id){
+		this.id=id;
+		Attributes= new At
+	}
+	
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class main {
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		game Game= new game();
+		Game.start_game();
+		Scanner sc = new Scanner(System.in);
+	    while(Game.game_finished()==0){
+	    	int i = sc.nextInt();
+	    }
+		
+		
+			
+	}
+
+}

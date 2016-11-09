@@ -1,0 +1,15 @@
+
+public class main {
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		game Game= new game();
+		Game.start_game();
+		
+			
+	}
+
+}

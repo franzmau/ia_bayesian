@@ -1,0 +1,14 @@
+
+public class Square implements Shape {
+
+	public void draw(int i) {
+		// TODO Auto-generated method stub
+		System.out.println("You need "+(i*i)+"of  square space to draw this square \n");
+	}
+
+	public void draw(int i, int j) {
+		// TODO Auto-generated method stub
+		draw(i);
+	}
+
+}

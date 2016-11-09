@@ -1,0 +1,9 @@
+
+public class main {
+	
+	
+	game juego= new game();
+	
+	juego.();
+
+}

@@ -1,0 +1,12 @@
+
+public class game {
+
+	int Board[][];
+			
+	public game(){
+		Board= new int [6][7];
+	}
+	public void start(){
+		
+	}
+}

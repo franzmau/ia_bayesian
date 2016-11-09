@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+public class Parser {
+	public static InputReader in;
+	private ArrayList<String> nodes_strings;
+	public ArrayList<Atrribute> attributes;
+	public Hashtable <String, Atrribute> nodes_hash;
+	private String plus;
+	private String neg;
+	
+	public Parser(){
+		in = new InputReader(System.in);
+	}
+	
+	
+	public void readNodes(){
+		attributes = new ArrayList<Atrribute>();
+		
+		
+		
+		// Wait until the string Nodes Appear
+		String relationText;
+		do{ 
+			relationText = in.readLine();
+		}while(!relationText.contains("@relation"));
+	   relationText=in.readLine();
+	   String attributesText;
+	   
+	   attributesText=in.readLine();
+	   while(attributesText.contains("@attribute")){
+		   String[] splitedText = attributesText.split("\\s+");
+		   
+		   
+		   
+		   attributesText=in.readLine();
+	   }
+	   
+		
+	}
+	
+}

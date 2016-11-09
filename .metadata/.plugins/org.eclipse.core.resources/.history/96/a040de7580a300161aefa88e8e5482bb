@@ -1,0 +1,14 @@
+
+public class game {
+
+	int Board[][];
+	final int length=6;
+	final int wide= 7;
+			
+	public game(){
+		Board= new int [length][wide];
+	}
+	public void start(){
+	
+	}
+}

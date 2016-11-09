@@ -1,0 +1,6 @@
+
+public class main {
+	game Game= new game();
+	Game.start();
+
+}

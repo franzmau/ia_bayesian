@@ -1,0 +1,14 @@
+
+public class Rectangle implements Shape {
+
+	public void draw(int i,int v) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void draw(int i) {
+		// TODO Auto-generated method stub
+		draw(i,i*2);
+	}
+
+}

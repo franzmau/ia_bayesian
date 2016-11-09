@@ -1,0 +1,20 @@
+
+public class main_Flyweight {
+
+	private static final String deparment[] = { "Accounting", "Developer", "Janitor", "Boss", "Finance","Marketing" };
+	   public static void main(String[] args) {
+
+	      for(int i=0; i < 200; ++i) {
+	         Employee employee = (Employee)ShapeFactory.getCircle(getRandomColor());
+	         circle.setX(getRandomIncome());
+	         circle.draw(circle.getX());
+	      }
+	   }
+	   private static String getRandomColor() {
+	      return deparment[(int)(Math.random()*deparment.length)];
+	   }
+	   private static int getRandomIncome() {
+	      return (int)(Math.random()*100 );
+	   }
+	  
+}

@@ -1,0 +1,10 @@
+
+public class main {
+	public static void main(String[] args) {
+		 ShapeMaker shapeMaker = new ShapeMaker();
+
+	      shapeMaker.drawCircle(3);
+	      shapeMaker.drawRectangle(4,2);
+	      shapeMaker.drawSquare(2);
+	}
+}
