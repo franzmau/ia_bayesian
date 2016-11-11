@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="687" maximized="true" width="658" x="302" y="34">
 <fastViewData fastViewLocation="1024">
@@ -21,6 +21,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditorNoSource" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -36,36 +37,21 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Employee.java" partName="Employee.java" path="/home/mauricio/workspace/DAS/src/Employee.java" title="Employee.java" tooltip="DAS/src/Employee.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DAS/src/Employee.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="289" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parser.java" partName="Parser.java" path="/home/mauricio/workspace/Data_mining/src/Parser.java" title="Parser.java" tooltip="Data_mining/src/Parser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Data_mining/src/Parser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="116" selectionOffset="4864" selectionTopPixel="2916"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="main_facade.java" partName="main_facade.java" path="/home/mauricio/workspace/DAS/src/main_facade.java" title="main_facade.java" tooltip="DAS/src/main_facade.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DAS/src/main_facade.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="149" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TablesStructure.java" partName="TablesStructure.java" path="/home/mauricio/workspace/Data_mining/src/TablesStructure.java" title="TablesStructure.java" tooltip="Data_mining/src/TablesStructure.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Data_mining/src/TablesStructure.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1057" selectionTopPixel="318"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Person.java" partName="Person.java" path="/home/mauricio/workspace/DAS/src/Person.java" title="Person.java" tooltip="DAS/src/Person.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DAS/src/Person.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="61" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Entreperneur.java" partName="Entreperneur.java" path="/home/mauricio/workspace/DAS/src/Entreperneur.java" title="Entreperneur.java" tooltip="DAS/src/Entreperneur.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DAS/src/Entreperneur.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="170" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Freelance.java" partName="Freelance.java" path="/home/mauricio/workspace/DAS/src/Freelance.java" title="Freelance.java" tooltip="DAS/src/Freelance.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DAS/src/Freelance.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="153" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Department.java" partName="Department.java" path="/home/mauricio/workspace/DAS/src/Department.java" title="Department.java" tooltip="DAS/src/Department.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DAS/src/Department.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="373" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ArrayList.class" partName="ArrayList.class" path="/tmp/ArrayList.class3089313514725153027.class" title="ArrayList.class" tooltip="java.util.ArrayList" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=Bayes/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.util(ArrayList.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="71" selectionOffset="23970" selectionTopPixel="10506"/>
 </editor>
 </editors>
 <views>
@@ -123,7 +109,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -291,7 +277,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@b56bd6f" ratio="0.7912913" ratioLeft="527" ratioRight="139" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@b56bd6f" ratio="0.5930931" ratioLeft="395" ratioRight="271" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -306,15 +292,8 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/main_Flyweight.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/main_facade.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/Person.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/Employee.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/Entreperneur.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/Freelance.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/PersonMaker.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/main_Flyweight.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/facade/src/Department.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/main_facade.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/Person.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/Employee.java"/>
@@ -323,156 +302,160 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/PersonMaker.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/main_Flyweight.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/Department.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/DAS/src/Employee.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Data_mining/src/Parser.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Data_mining/src/TablesStructure.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Bayes/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.util(ArrayList.class"/>
 </editors>
-<item historyLabel="main_Flyweight.java" index="0">
-<position info="not_deleted" x="345" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="639" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="0">
-<position info="not_deleted" x="412" y="0"/>
-</item>
-<item historyLabel="main_facade.java" index="1">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="Person.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="0">
-<position info="not_deleted" x="412" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="639" y="0"/>
-</item>
-<item historyLabel="Person.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="main_facade.java" index="1">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="Person.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="PersonMaker.java" index="6">
-<position info="not_deleted" x="343" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="0">
-<position info="not_deleted" x="412" y="0"/>
-</item>
-<item historyLabel="main_facade.java" index="1">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="PersonMaker.java" index="6">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="Person.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="main_facade.java" index="1">
-<position info="not_deleted" x="149" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="410" y="7"/>
-</item>
-<item historyLabel="Person.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="Entreperneur.java" index="4">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="Person.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="418" y="0"/>
-</item>
-<item historyLabel="Freelance.java" index="5">
-<position info="not_deleted" x="153" y="0"/>
-</item>
-<item historyLabel="Entreperneur.java" index="4">
+<item historyLabel="Entreperneur.java" index="0">
 <position info="not_deleted" x="170" y="0"/>
 </item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="main_facade.java" index="1">
-<position info="not_deleted" x="149" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="7">
-<position info="not_deleted" x="269" y="10"/>
-</item>
-<item historyLabel="Department.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="7">
-<position info="not_deleted" x="1284" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="406" y="0"/>
-</item>
-<item historyLabel="Employee.java" index="3">
-<position info="not_deleted" x="289" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="7">
-<position info="not_deleted" x="1284" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="7">
-<position info="not_deleted" x="1273" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="7">
+<item historyLabel="main_Flyweight.java" index="1">
 <position info="not_deleted" x="1218" y="0"/>
 </item>
-<item historyLabel="Department.java" index="8">
-<position info="not_deleted" x="378" y="0"/>
-</item>
-<item historyLabel="Entreperneur.java" index="4">
-<position info="not_deleted" x="170" y="0"/>
-</item>
-<item historyLabel="main_Flyweight.java" index="7">
-<position info="not_deleted" x="1218" y="0"/>
-</item>
-<item historyLabel="main_facade.java" index="9">
+<item historyLabel="main_facade.java" index="2">
 <position info="not_deleted" x="149" y="0"/>
 </item>
-<item historyLabel="Person.java" index="10">
+<item historyLabel="Person.java" index="3">
 <position info="not_deleted" x="61" y="0"/>
 </item>
-<item historyLabel="Employee.java" index="11">
+<item historyLabel="Employee.java" index="4">
 <position info="not_deleted" x="289" y="0"/>
 </item>
-<item historyLabel="Entreperneur.java" index="12">
+<item historyLabel="Entreperneur.java" index="5">
 <position info="not_deleted" x="170" y="0"/>
 </item>
-<item historyLabel="Freelance.java" index="13">
+<item historyLabel="Freelance.java" index="6">
 <position info="not_deleted" x="153" y="0"/>
 </item>
-<item historyLabel="PersonMaker.java" index="14">
+<item historyLabel="PersonMaker.java" index="7">
 <position info="not_deleted" x="141" y="0"/>
 </item>
-<item historyLabel="main_Flyweight.java" index="15">
+<item historyLabel="main_Flyweight.java" index="8">
 <position info="not_deleted" x="1185" y="0"/>
 </item>
-<item historyLabel="Department.java" index="16">
+<item historyLabel="Department.java" index="9">
 <position info="not_deleted" x="127" y="0"/>
 </item>
-<item historyLabel="main_Flyweight.java" index="15">
+<item historyLabel="main_Flyweight.java" index="8">
 <position info="not_deleted" x="1185" y="0"/>
 </item>
-<item historyLabel="Entreperneur.java" index="12">
+<item historyLabel="Entreperneur.java" index="5">
 <position info="not_deleted" x="170" y="0"/>
 </item>
-<item historyLabel="Department.java" index="16">
+<item historyLabel="Department.java" index="9">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="Department.java" index="16">
-<position info="not_deleted" x="112" y="29"/>
+<item historyLabel="Department.java" index="9">
+<position info="not_deleted" x="373" y="0"/>
+</item>
+<item historyLabel="Employee.java" index="10">
+<position info="not_deleted" x="289" y="0"/>
+</item>
+<item historyLabel="Parser.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="632" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1069" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="632" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="841" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="738" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="766" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="836" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1007" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1062" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="709" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="834" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1059" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="737" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="737" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="737" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="707" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="708" y="1"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="735" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1153" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1213" y="0"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position/>
+</item>
+<item historyLabel="Parser.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Parser.java" index="11">
+<position info="not_deleted" x="4978" y="0"/>
+</item>
+<item historyLabel="Parser.java" index="11">
+<position info="not_deleted" x="4985" y="0"/>
+</item>
+<item historyLabel="Parser.java" index="11">
+<position info="not_deleted" x="4864" y="116"/>
+</item>
+<item historyLabel="ArrayList.class" index="13">
+<position info="not_deleted" x="17854" y="26"/>
+</item>
+<item historyLabel="ArrayList.class" index="13">
+<position info="not_deleted" x="23970" y="71"/>
+</item>
+<item historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1061" y="0"/>
+</item>
+<item active="true" historyLabel="TablesStructure.java" index="12">
+<position info="not_deleted" x="1035" y="27"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -491,6 +474,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ArrayList.class" tooltip="java.util.ArrayList">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Bayes/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.util(ArrayList.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TablesStructure.java" tooltip="Data_mining/src/TablesStructure.java">
+<persistable path="/Data_mining/src/TablesStructure.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parser.java" tooltip="Data_mining/src/Parser.java">
+<persistable path="/Data_mining/src/Parser.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Department.java" tooltip="DAS/src/Department.java">
 <persistable path="/DAS/src/Department.java"/>
 </file>

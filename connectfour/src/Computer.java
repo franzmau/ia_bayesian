@@ -66,6 +66,8 @@ public class Computer {
 		return 0;
 	}
 
+	
+	
 	public void print(int Boarda[][]){
 		for (int i=0; i< length;i++){
 			for(int j=0;j<wide;j++){
@@ -92,23 +94,39 @@ public class Computer {
 		
 		int boardaux[][]=new int[length][wide];
 		int Real[][]=new int[length][wide];
+		int zero=-300;
+		int one=-300;
+		int two=-300;
+		int four=-300;
+		int five=-300;
+		int six=-300;
 		Real=this.clone(Bo);
+		
+		
+		if(this.play_player(0)){
 		boardaux=this.insertBoard(Real, 0, 1);
-		if(boardaux!=null){
-			print(boardaux);
+			if(boardaux!=null){
+				print(boardaux);
 			}
-		
-		int zero=compute(boardaux,0);
-		
-		Real=this.clone(Bo);
-		boardaux=this.insertBoard(Real, 1, 1);
-		if(boardaux!=null){
-		//print(boardaux);
+			zero=compute(boardaux,0);
 		}
-		System.out.println("Esto se imprimira");
-		print(boardaux);
-		int one= compute(boardaux,0);
+		
 		Real=this.clone(Bo);
+		
+		
+		if(this.play_player(1)){
+			boardaux=this.insertBoard(Real, 1, 1);
+			if(boardaux!=null){
+				print(boardaux);
+			}
+			one= compute(boardaux,0);
+		}
+		
+		
+		
+		
+		Real=this.clone(Bo);
+		if(this.play_player(2))
 		boardaux=this.insertBoard(Real, 2, 1);
 		if(boardaux!=null){
 			//print(boardaux);
@@ -227,9 +245,7 @@ public class Computer {
 			return big(best);
 		}
 		
-	
-
-	
+		
 	public int big(ArrayList<Integer>list){
 		int bigg =-25;
 		for(int i:list){

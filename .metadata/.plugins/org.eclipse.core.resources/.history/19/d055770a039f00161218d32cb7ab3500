@@ -1,9 +1,0 @@
-
-public class Rectangle implements Shape {
-
-	public void draw(int i) {
-		// TODO Auto-generated method stub
-
-	}
-
-}
